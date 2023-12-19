@@ -1,0 +1,6 @@
+﻿  main.cpp
+C:\Users\Artyom\OneDrive\Рабочий стол\ОПИ\opi_biglab_impl\main.cpp(244,35): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Artyom\OneDrive\Рабочий стол\ОПИ\opi_biglab_impl\main.cpp(270,35): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Artyom\OneDrive\Рабочий стол\ОПИ\opi_biglab_impl\main.cpp(757,35): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Artyom\OneDrive\Рабочий стол\ОПИ\opi_biglab_impl\main.cpp(782,35): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  opi_biglab_impl.vcxproj -> C:\Users\Artyom\OneDrive\Рабочий стол\ОПИ\opi_biglab_impl\x64\Debug\opi_biglab_impl.exe
