@@ -10,6 +10,10 @@ from math import sin, cos
 
 import g4f
 
+def report(ptype, mtype, op, time, res):
+    with open('report.txt', 'a') as f:
+        f.write(f'{ptype} {mtype} {op} {res} {time}')
+
 class MainWindow(QWidget):
     def __init__(self, tests=False):
         super().__init__()
@@ -125,11 +129,16 @@ class MainWindow(QWidget):
         self.gpt_text.setText(formatted_text)
 
     def on_generate_button_click(self):
+        if self.array_size_input.text() == "" or self.range_min_input.text() == "" or self.range_max_input.text() == "":
+            return
+
         data_type = self.data_type_combo.currentText()
         array_type = self.array_type_combo.currentText()
         array_size = int(self.array_size_input.text())
         range_minf = float(self.range_min_input.text())
         range_maxf = float(self.range_max_input.text())
+
+
 
         start_time = time.time()
         display_text = ""
@@ -220,6 +229,9 @@ class MainWindow(QWidget):
         end_time = time.time()
         execution_time = end_time - start_time
 
+        array_type = self.array_type_combo.currentText()
+
+        report(data_type, array_type, operation, execution_time, result)
         self.scroll_contents.addItem(f"Время выполнения: {execution_time} сек; Результат: {result};")
 
     def _run_tests(self):
